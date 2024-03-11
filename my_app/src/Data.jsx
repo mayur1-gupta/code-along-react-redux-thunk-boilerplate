@@ -1,15 +1,15 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { userThunk } from './Redux/Reducer'
-import { useSelectors } from './Redux/Reducer'
+import { userOfThunk } from './Redux/Reducer'
+import { Selectors } from './Redux/Reducer'
 import './App.css'
 const Data = () => {
     const dispatch = useDispatch()
-    const useData = useSelector(useSelectors)
+    const useData = useSelector(Selectors)
 
     useEffect(()=>{
-        dispatch(userThunk())
+        dispatch(userOfThunk())
     },[])
 
 console.log(useData)
